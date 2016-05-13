@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=IntelliJ
+Terminal=false
+Name=IntelliJ
+Exec=/opt/intellij/bin/idea.sh
+Type=Application
+Icon=/opt/intellij/bin/idea.png

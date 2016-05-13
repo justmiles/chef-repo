@@ -1,0 +1,49 @@
+{
+  "name": "justmiles",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "I use this role to provision my personal machines",
+  "override_attributes": {
+    "user": "justmiles",
+    "users": {
+      "justmiles" : {
+        "shell" : "/usr/bin/fish"
+      }
+    },
+    "global_packages": [
+      "mlocate",
+      "parcellite",
+      "guake",
+      "sublime-text",
+      "terminator",
+      "curl",
+      "gparted",
+      "parcellite",
+      "vim",
+      "fish",
+      "wireshark"
+    ],
+    "nodejs": {
+      "version": "4.2.2",
+      "versions": [
+        "4.2.2"
+      ],
+      "global_packages": [
+        "node-gyp",
+        "coffee-script",
+        "pm2",
+        "mocha",
+        "newman",
+        "deja",
+        "codiad",
+        "http-tail"
+      ]
+    }
+  },
+  "run_list": [
+    "recipe[unorganized_apps]",
+    "recipe[unorganized_apps::intellij]",
+    "recipe[unorganized_apps::nodejs]",
+    "recipe[unorganized_apps::policies]"
+  ]
+}

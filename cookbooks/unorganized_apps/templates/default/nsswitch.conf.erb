@@ -1,0 +1,20 @@
+# /etc/nsswitch.conf
+#
+# Managed with Chef!
+# TODO: add custom configsw
+
+passwd:         compat
+group:          compat
+shadow:         compat
+
+# promoting dns with Chef
+
+hosts:          files dns mdns4_minimal [NOTFOUND=return]
+networks:       files
+
+protocols:      db files
+services:       db files
+ethers:         db files
+rpc:            db files
+
+netgroup:       nis
