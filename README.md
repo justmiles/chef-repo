@@ -1,4 +1,5 @@
 Personal Chef repo
+
 I use this to bootstrap personal machines and VMs.
 
 Download the project and explode it somewhere. cd into that directory and run the following:
