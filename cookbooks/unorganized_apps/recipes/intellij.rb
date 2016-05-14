@@ -9,12 +9,10 @@
 
 #TODO: Install Java
 
-version = '2016.1.1'
 install_dir = '/opt/intellij'
 
-
 remote_file '/tmp/ideaIU.tar.gz' do
-  source "https://download.jetbrains.com/idea/ideaIU-#{version}.tar.gz"
+  source "https://download.jetbrains.com/idea/ideaIU-#{node['intellij']['version']}.tar.gz"
   action :create
 end
 

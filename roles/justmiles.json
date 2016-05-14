@@ -11,6 +11,8 @@
       }
     },
     "global_packages": [
+      "gcc",
+      "g++",
       "mlocate",
       "parcellite",
       "guake",
@@ -18,10 +20,12 @@
       "terminator",
       "curl",
       "gparted",
+      "atom",
       "parcellite",
       "vim",
       "fish",
-      "wireshark"
+      "wireshark",
+      "meld"
     ],
     "nodejs": {
       "version": "4.2.2",
