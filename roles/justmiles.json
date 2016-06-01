@@ -11,6 +11,7 @@
       }
     },
     "global_packages": [
+      "git",
       "gcc",
       "g++",
       "mlocate",
