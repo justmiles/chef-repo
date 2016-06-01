@@ -12,6 +12,7 @@
     },
     "global_packages": [
       "git",
+      "xdotool",
       "gcc",
       "g++",
       "mlocate",
