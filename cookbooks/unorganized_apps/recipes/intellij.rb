@@ -11,7 +11,7 @@
 
 install_dir = '/opt/intellij'
 
-remote_file '/tmp/ideaIU.tar.gz' do
+remote_file "#{Chef::Config['file_cache_path']}/ideaIU.tar.gz" do
   source "https://download.jetbrains.com/idea/ideaIU-#{node['intellij']['version']}.tar.gz"
   action :create
 end
@@ -19,13 +19,13 @@ end
 directory install_dir do
   recursive true
   action :create
-  subscribes :delete, "remote_file[/tmp/ideaIU.tar.gz]", :immediately
+  subscribes :delete, "remote_file[#{Chef::Config['file_cache_path']}/ideaIU.tar.gz]", :immediately
 end
 
 bash 'intellij' do
   code "tar -zxf ideaIU.tar.gz --transform 's_^idea-IU-[0-9]*\.[0-9]*\.[0-9]*/_intellij/_'  -C /opt/"
   cwd '/tmp'
-  subscribes :run, "remote_file[/tmp/ideaIU.tar.gz]", :delayed
+  subscribes :run, "remote_file[#{Chef::Config['file_cache_path']}/ideaIU.tar.gz]", :delayed
 end
 
 

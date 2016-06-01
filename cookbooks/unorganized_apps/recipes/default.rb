@@ -11,4 +11,3 @@ node['global_packages'].each do |package_name|
   package package_name
 end
 
-#TODO: install slack, chef-dk,
