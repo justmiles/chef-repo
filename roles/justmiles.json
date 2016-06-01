@@ -13,10 +13,10 @@
     "global_packages": [
       "git",
       "xdotool",
+      "wmctrl",
       "gcc",
       "g++",
       "mlocate",
-      "parcellite",
       "guake",
       "sublime-text",
       "terminator",
