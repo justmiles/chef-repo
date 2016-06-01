@@ -9,14 +9,15 @@
 
 remote_file 'nvm' do
   source 'https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh'
-  path '/tmp/nvm.sh'
+  path "#{Chef::Config['file_cache_path']}/nvm.sh"
   mode 0755
 end
 
-execute 'apache_configtest' do
-  command '/tmp/nvm.sh'
+execute 'install nvm' do
+  command "#{Chef::Config['file_cache_path']}/nvm.sh"
   user node['user']
   subscribes :run, 'remote_file[nvm]', :immediately
+  action :nothing
 end
 
 node['nodejs']['versions'].each do |nodeVersion|

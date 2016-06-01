@@ -26,6 +26,7 @@ bash 'intellij' do
   code "tar -zxf ideaIU.tar.gz --transform 's_^idea-IU-[0-9]*\.[0-9]*\.[0-9]*/_intellij/_'  -C /opt/"
   cwd '/tmp'
   subscribes :run, "remote_file[#{Chef::Config['file_cache_path']}/ideaIU.tar.gz]", :delayed
+  action :nothing
 end
 
 

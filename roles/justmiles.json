@@ -49,6 +49,8 @@
     "recipe[unorganized_apps]",
     "recipe[unorganized_apps::intellij]",
     "recipe[unorganized_apps::nodejs]",
+    "recipe[unorganized_apps::chef-dk]",
+    "recipe[unorganized_apps::slack]",
     "recipe[unorganized_apps::policies]"
   ]
 }
