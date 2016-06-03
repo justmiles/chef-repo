@@ -1,4 +1,3 @@
-{
   "name": "justmiles",
   "chef_type": "role",
   "json_class": "Chef::Role",
@@ -26,6 +25,7 @@
       "vim",
       "fish",
       "wireshark",
+      "autossh",
       "meld"
     ],
     "nodejs": {
@@ -43,6 +43,23 @@
         "codiad",
         "http-tail"
       ]
+    },
+    "atom": {
+      "packages": [
+        "emmet",
+        "atom-beautify",
+        "project-manager",
+        "file-icons",
+        "git-time-machine",
+        "activate-power-mode",
+        "minimap",
+        "coffee-links",
+        "language-terraform",
+        "language-chef",
+        "linter",
+        "linter-coffeescript",
+        "linter-foodcritic"
+      ]
     }
   },
   "run_list": [
@@ -51,6 +68,7 @@
     "recipe[unorganized_apps::nodejs]",
     "recipe[unorganized_apps::chef-dk]",
     "recipe[unorganized_apps::slack]",
+    "recipe[unorganized_apps::atom]",
     "recipe[unorganized_apps::policies]"
   ]
 }

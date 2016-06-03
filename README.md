@@ -9,4 +9,4 @@ sudo chef-client -z -o "role[justmiles]"
 ```
 
 TODO: include a google-chrome cookbook
-TODO: include atom repo
+TODO: install terraform

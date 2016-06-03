@@ -40,3 +40,7 @@ node['users'].each do |user, data|
     end
 
 end
+
+file '/opt/intellij/version' do
+  content node['intellij']['version']
+end
